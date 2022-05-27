@@ -1,0 +1,303 @@
+/* natural box model */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+/* UTILITIES */
+
+/* hides an element on screen, but not from screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+/* no break */
+.nobr {
+  white-space: nowrap;
+}
+
+
+/* NAVIGATION */
+h1 {
+  font-size: 24px;
+  font-weight: normal;
+  padding: 1.5em 0 1.0em;
+  text-align: center;
+  background-color: black;
+  color:white;
+  margin: 0 auto;
+}
+
+.menuuu{
+  height: 30px;
+  width:40px;
+  background-color: black;
+}
+.openbtn {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  color: white;
+  font-family: 'PT Sans', sans-serif;
+}
+.openbtn:hover {
+  color: grey;
+}
+.menu-text {
+  font-size: 15px;
+  display: block;
+  color:white;
+}
+.all-over-bkg {
+  display: none;    
+}
+i{
+  color:white;
+}
+.is-visible {
+  background-color: rgba(0,0,0,0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 9999;
+  display: block;
+}
+#mySidenav {
+  z-index: 10000;
+}
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  background-color: white;  
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  font-family: 'PT Serif', serif;
+  color: black;
+}
+.sidenav a:hover {
+  color: var(--iu-red);
+  text-decoration: underline;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+main {
+  transition: margin-left .5s;
+  padding: 0;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+/* START STYLES HERE */
+
+/* images */
+img{
+  width:100%;
+}
+figure{
+  margin:2em auto;
+  text-align: center;
+  max-width: 450px;
+}
+figcaption{
+  font-size: 80%;
+  font-style: italic;
+}
+
+
+/* links */
+a:hover, a:active{
+  color:grey;
+  text-decoration: underline;
+}
+a{
+  color:black;
+  font-weight: bold;
+  text-decoration: underline;
+  line-height: 0.65cm;
+}
+
+
+/* navigation */
+.navi{
+  background-color: black;
+  color: rgb(184, 7, 7);
+}
+.back{
+  color:white;
+  display: flex;
+  justify-content: flex-start;
+  padding:0 0 0 1em;
+  font-size: medium;
+}
+
+
+/* typography */
+p, li, figcaption{
+  line-height: 1.3em;
+  font-family: 'PT Serif', serif;
+  font-size: medium;
+}
+.bold{
+  font-weight: bold;
+}
+h1, h2, h3{
+  font-family: 'Libre Baskerville', serif;
+}
+h1{
+  font-size: 24px;
+}
+h2{
+  display:flex;
+  justify-content: center;
+  background-color: peachpuff;
+  color:black;
+  padding:0.75em;
+  margin-top: 2em;
+}
+
+
+/* structure */
+.cs, .ds, .ns, .rep, .res{
+  margin:1em;
+}
+footer{
+  height:50px;
+  background-color: black;
+}
+.container1, .container3, .container4{
+  padding:0 1em 1em 1em;
+  margin:0 auto;
+  max-width: 960px;
+}
+.container2{
+  padding:2em 3em;
+  background-color: rgba(191,191,191,0.5);
+  margin:0 auto;
+  max-width: 960px;
+}
+.center{
+  display:flex;
+  justify-content: center;
+  background-color: rgba(191,191,191,0.5);
+  padding:1em;
+}
+li{
+  padding-bottom: 0.5em;
+}
+.acid{
+  border-bottom: 2px black dashed;
+}
+.box{
+  background-color: rgb(184, 7, 7);
+  padding:1px;
+  display:flex;
+  justify-content: center;
+  color:white;
+}
+
+
+/* section */
+section{
+  display:flex;
+  flex-flow: row wrap;
+  padding:1em;
+  border: 2px black dashed;
+  border-bottom: none;
+}
+.text{
+  padding: 0 2em 0 0;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  flex:1 1 auto;
+}
+section figure{
+  width: 200px;
+  flex:1 1 auto;
+}
+
+
+
+/* MEDIA QUERIES FROM SMALLEST TO LARGEST = MOBILE FIRST */
+/* Extra small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+  
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  h1{
+    font-size: 30px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+
+
+/* MEDIA QUERIES FROM LARGEST TO SMALLEST */
+/* Extra small devices (portrait phones, less than 576px) */
+/* @media (max-width: 575.98px) {
+
+} */
+
+/* Small devices (landscape phones, less than 768px) */
+/* @media (max-width: 767.98px) {
+
+} */
+
+/* Medium devices (tablets, less than 992px) */
+/* @media (max-width: 991.98px) {
+
+} */
+
+/* Large devices (desktops, less than 1200px) */
+/* @media (max-width: 1199.98px) {
+
+} */
+
+/* Extra large devices (large desktops)
+No media query since the extra-large breakpoint has no upper bound on its width */
